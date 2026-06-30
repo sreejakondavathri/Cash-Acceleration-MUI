@@ -1,0 +1,47 @@
+.tabs {
+  margin-bottom: 28px;
+}
+
+.tabs :global(.MuiTabs-flexContainer) {
+  gap: 12px;
+}
+
+.tabs :global(.MuiTabs-indicator) {
+  display: none;
+}
+
+.tab {
+  margin-right: 12px !important;
+
+  text-transform: none !important;
+
+  min-height: 40px !important;
+
+  min-width: 145px !important;
+
+  padding: 8px 20px !important;
+
+  border-radius: 12px !important;
+
+  background-color: #23232f !important;
+
+  color: #ffffff !important;
+
+  border: 1px solid #3a3b46 !important;
+
+  font-size: 14px !important;
+
+  font-weight: 500 !important;
+}
+
+.tab:global(.Mui-selected) {
+  background-color: #3c3563 !important;
+
+  color: #b6abff !important;
+
+  border: 1px solid #8c7cf7 !important;
+}
+
+.tab:hover {
+  background-color: #2c2c39 !important;
+}

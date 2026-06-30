@@ -1,0 +1,58 @@
+.table {
+  width: 100%;
+  margin-top: 12px;
+  border-collapse: separate !important;
+  border-spacing: 0 10px;
+}
+
+.headerCell {
+  background: #23232f !important;
+
+  color: #8f90a6 !important;
+
+  font-size: 12px !important;
+
+  font-weight: 500 !important;
+
+  border-bottom: none !important;
+
+  padding: 14px 24px !important;
+}
+
+.firstHeader {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.lastHeader {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.bodyCell {
+  border-bottom: none !important;
+
+  padding: 18px 24px !important;
+
+  background: transparent;
+}
+
+.bodyText {
+  color: #cfd0d8 !important;
+
+  font-size: 14px !important;
+
+  font-weight: 400 !important;
+
+  line-height: 20px !important;
+}
+
+.caption {
+  color: #8f90a6 !important;
+
+  font-size: 12px !important;
+
+  margin-top: 2px !important;
+
+  line-height: 18px !important;
+}
