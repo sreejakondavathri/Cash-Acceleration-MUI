@@ -14,7 +14,7 @@ describe("CashAcceleration", () => {
     vi.clearAllMocks();
   });
 
-  test("renders heading", async () => {
+  test("should render heading", async () => {
     mockedService.getContracts.mockResolvedValue([]);
 
     mockedService.getCashKicks.mockResolvedValue([]);
@@ -26,7 +26,7 @@ describe("CashAcceleration", () => {
     ).toBeInTheDocument();
   });
 
-  test("shows contracts after loading", async () => {
+  test("should display contracts after loading successfully", async () => {
     mockedService.getContracts.mockResolvedValue([
       {
         id: "1",
@@ -49,7 +49,7 @@ describe("CashAcceleration", () => {
     ).toBeInTheDocument();
   });
 
-  test("switches to cash kicks tab", async () => {
+  test("should switch to the My Cash Kicks tab when it is clicked", async () => {
     const user = userEvent.setup();
 
     mockedService.getContracts.mockResolvedValue([]);
@@ -78,7 +78,7 @@ describe("CashAcceleration", () => {
     ).toBeInTheDocument();
   });
 
-  test("shows empty contracts state", async () => {
+  test("should display the empty contracts state when no contracts are available", async () => {
     mockedService.getContracts.mockResolvedValue([]);
 
     mockedService.getCashKicks.mockResolvedValue([]);
@@ -92,7 +92,7 @@ describe("CashAcceleration", () => {
     ).toBeInTheDocument();
   });
 
-  test("shows empty cash kicks state", async () => {
+  test("should display the empty cash kicks state when no cash kicks are available", async () => {
     const user = userEvent.setup();
 
     mockedService.getContracts.mockResolvedValue([]);
@@ -114,7 +114,7 @@ describe("CashAcceleration", () => {
     ).toBeInTheDocument();
   });
 
-  test("shows error state", async () => {
+  test("should display an error message when data loading fails", async () => {
     mockedService.getContracts.mockRejectedValue(
       new Error("Failed")
     );

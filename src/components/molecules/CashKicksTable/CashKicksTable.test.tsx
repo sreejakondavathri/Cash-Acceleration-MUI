@@ -16,7 +16,7 @@ const cashKicks: CashKick[] = [
 ];
 
 describe("CashKicksTable", () => {
-  test("renders table headers", () => {
+  test("should render table headers", () => {
     render(<CashKicksTable cashKicks={cashKicks} />);
 
     expect(screen.getByText("Name")).toBeInTheDocument();
@@ -26,7 +26,7 @@ describe("CashKicksTable", () => {
     expect(screen.getByText("Total Financed")).toBeInTheDocument();
   });
 
-  test("renders cash kick data", () => {
+  test("should render cash kick data", () => {
     render(<CashKicksTable cashKicks={cashKicks} />);
 
     expect(
@@ -50,7 +50,7 @@ describe("CashKicksTable", () => {
     ).toBeInTheDocument();
   });
 
-  test("renders pending status badge", () => {
+  test("should render pending status badge", () => {
     render(<CashKicksTable cashKicks={cashKicks} />);
 
     expect(
@@ -58,7 +58,7 @@ describe("CashKicksTable", () => {
     ).toBeInTheDocument();
   });
 
-  test("renders one data row", () => {
+  test("should render one data row", () => {
     render(<CashKicksTable cashKicks={cashKicks} />);
 
     const rows = screen.getAllByRole("row");

@@ -4,7 +4,7 @@ import userEvent from "@testing-library/user-event";
 import Tabs from "./Tabs";
 
 describe("Tabs Component", () => {
-  test("renders both tabs", () => {
+  test("should render both tabs", () => {
     render(
       <Tabs
         activeTab="contracts"
@@ -25,7 +25,7 @@ describe("Tabs Component", () => {
     ).toBeInTheDocument();
   });
 
-  test("contracts tab is selected initially", () => {
+  test("should select My Contracts tab by default", () => {
     render(
       <Tabs
         activeTab="contracts"
@@ -43,7 +43,7 @@ describe("Tabs Component", () => {
     );
   });
 
-  test("calls callback when another tab clicked", async () => {
+  test("should call onTabChange when My Cash Kicks tab is clicked", async () => {
     const user = userEvent.setup();
 
     const handleTabChange = vi.fn();

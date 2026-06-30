@@ -18,7 +18,7 @@ const contracts: Contract[] = [
 ];
 
 describe("ContractsTable", () => {
-  test("renders table headers", () => {
+  test("should render table headers", () => {
     render(<ContractsTable contracts={contracts} />);
 
     expect(screen.getByText("Name")).toBeInTheDocument();
@@ -28,7 +28,7 @@ describe("ContractsTable", () => {
     expect(screen.getByText("Payment Amount")).toBeInTheDocument();
   });
 
-  test("renders contract data", () => {
+  test("should render contract data", () => {
     render(<ContractsTable contracts={contracts} />);
 
     expect(screen.getByText("Contract 1")).toBeInTheDocument();
@@ -40,7 +40,7 @@ describe("ContractsTable", () => {
     expect(screen.getByText("$63,380.00")).toBeInTheDocument();
   });
 
-  test("renders one data row", () => {
+  test("should render one data row", () => {
     render(<ContractsTable contracts={contracts} />);
 
     const rows = screen.getAllByRole("row");

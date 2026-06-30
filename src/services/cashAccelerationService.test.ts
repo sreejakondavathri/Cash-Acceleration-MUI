@@ -13,7 +13,7 @@ describe("cashAccelerationService", () => {
     mock.reset();
   });
 
-  test("fetches contracts", async () => {
+  test("should fetch contracts", async () => {
     mock.onGet(
       "http://localhost:3001/contracts"
     ).reply(200, [
@@ -30,7 +30,7 @@ describe("cashAccelerationService", () => {
     expect(result[0].name).toBe("Contract 1");
   });
 
-  test("fetches cash kicks", async () => {
+  test("should fetch cash kicks", async () => {
     mock.onGet(
       "http://localhost:3001/cashKicks"
     ).reply(200, [

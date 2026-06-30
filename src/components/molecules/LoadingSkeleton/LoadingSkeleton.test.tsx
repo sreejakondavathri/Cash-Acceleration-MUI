@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import LoadingSkeleton from "./LoadingSkeleton";
 
 describe("LoadingSkeleton", () => {
-  test("renders skeleton placeholders", () => {
+  test("should render skeleton placeholders", () => {
     render(<LoadingSkeleton />);
 
     const skeletons =
